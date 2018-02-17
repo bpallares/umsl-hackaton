@@ -4,12 +4,12 @@ import InputControl from '../Presentational/InputControl'
 import { Container } from 'semantic-ui-react'
 import './index.css'
 class AppContainer extends Component {
-  constructor(){
+  constructor () {
     super()
     this.state = {
-      job:'',
+      job: '',
       rooms: 3,
-      type:'Type State default',
+      type: 'Type State default',
       data: []
     }
     this.onJobChange = this.onJobChange.bind(this)
@@ -17,29 +17,28 @@ class AppContainer extends Component {
     this.onTypeChange = this.onTypeChange.bind(this)
   }
   onJobChange (value) {
-    this.setState({job:value})
+    this.setState({job: value})
   }
-  onRoomsChange(value){
-    this.setState({rooms:value})
+  onRoomsChange (value) {
+    this.setState({rooms: value})
   }
-  onTypeChange(value){
+  onTypeChange = (e, { name, value, options }) => {
+    // this.setState({ [name]: value })
     console.log(value)
-    this.setState({type:value})
   }
   render () {
-   
-    return(
+    return (
       <Container className='custom-container'>
-        <InputControl 
-        job={this.state.job} 
-        onJobChange={this.onJobChange}
-        rooms={this.state.rooms}
-        onRoomsChange={this.onRoomsChange}
-        type={this.state.type}
-        onTypeChange={this.onTypeChange}   />
+        <InputControl
+          job={this.state.job}
+          onJobChange={this.onJobChange}
+          rooms={this.state.rooms}
+          onRoomsChange={this.onRoomsChange}
+          type={this.state.type}
+          onTypeChange={this.onTypeChange} />
         <Map />
       </Container>
     )
   }
-} 
+}
 export default AppContainer
