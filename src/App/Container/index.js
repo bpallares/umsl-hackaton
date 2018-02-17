@@ -3,6 +3,7 @@ import Map from '../Presentational/Map'
 import InputControl from '../Presentational/InputControl'
 import { Container } from 'semantic-ui-react'
 import './index.css'
+
 class AppContainer extends Component {
   constructor () {
     super()
@@ -35,6 +36,7 @@ class AppContainer extends Component {
           onRoomsChange={this.onRoomsChange}
           type={this.state.type}
           onTypeChange={this.onTypeChange} />
+        <br />
         <Map />
       </Container>
     )
