@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { compose, withProps } from 'recompose'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
 import { Chart } from 'react-google-charts'
+import {getCityObject} from '../../Utils/getCity'
 
 /* do no use this for now
 import googleMapsClient from '@google/maps'
@@ -9,27 +10,211 @@ import googleMapsClient from '@google/maps'
 const mapApi = googleMapsClient.createClient({
   key: 'AIzaSyAxlbeo458rZlvcDldjT-KijKkMn3ccvdo',
   Promise: Promise
-})
+}) */
 
 const MyMapComponent = compose(
   withProps({
     googleMapURL: 'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
+    containerElement: <div style={{ height: `900px` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
   withGoogleMap
 )((props) =>
   <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
+    defaultZoom={4}
+    defaultOptions={{
+      zoomControl: false,
+      scaleControl: false,
+      scrollwheel: false,
+      disableDoubleClickZoom: true,
+      disableDefaultUI: true,
+      draggable: false,
+      styles: [
+        {
+          featureType: 'all',
+          elementType: 'labels.text.fill',
+          stylers: [
+            {
+              saturation: 36
+            },
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 40
+            }
+          ]
+        },
+        {
+          featureType: 'all',
+          elementType: 'labels.text.stroke',
+          stylers: [
+            {
+              visibility: 'on'
+            },
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: 'all',
+          elementType: 'labels.icon',
+          stylers: [
+            {
+              visibility: 'off'
+            }
+          ]
+        },
+        {
+          featureType: 'administrative',
+          elementType: 'geometry.fill',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: 'administrative',
+          elementType: 'geometry.stroke',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 17
+            },
+            {
+              weight: 1.2
+            }
+          ]
+        },
+        {
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 21
+            }
+          ]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.fill',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 17
+            }
+          ]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 29
+            },
+            {
+              weight: 0.2
+            }
+          ]
+        },
+        {
+          featureType: 'road.arterial',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 18
+            }
+          ]
+        },
+        {
+          featureType: 'road.local',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: 'transit',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 19
+            }
+          ]
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [
+            {
+              color: '#000000'
+            },
+            {
+              lightness: 17
+            }
+          ]
+        }
+      ]
+    }}
+
+    defaultCenter={{ lat: 42.877742, lng: -97.380979 }}
   >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} onClick={props.onMarkerClick} />}
+    {props.isMarkerShown && (
+      <span>
+        <Marker position={{ lat: getCityObject('Orlando').latitude, lng: getCityObject('Orlando').longitude }} onClick={props.onMarkerClick} />
+        <Marker position={{ lat: getCityObject('New York').latitude, lng: getCityObject('New York').longitude }} onClick={props.onMarkerClick} />
+        <Marker position={{ lat: getCityObject('San Francisco').latitude, lng: getCityObject('San Francisco').longitude }} onClick={props.onMarkerClick} />
+        <Marker position={{ lat: getCityObject('Chicago').latitude, lng: getCityObject('Chicago').longitude }} onClick={props.onMarkerClick} />
+      </span>
+    )
+    }
   </GoogleMap>
 )
 
-class Map extends React.PureComponent {
+export default class Map extends React.PureComponent {
   state = {
     isMarkerShown: false
   }
@@ -57,67 +242,27 @@ class Map extends React.PureComponent {
       />
     )
   }
-} */
+}
+
+/*
 export default class Map extends Component {
   render () {
     var options = {
-      displayMode: 'regions',
+      displayMode: 'markers',
       region: 'US',
-      resolution: 'provinces'
+      resolution: 'provinces',
+      colorAxis: {colors: ['#08ff00']},
+      backgroundColor: 'none',
+      datalessRegionColor: '#515861',
+      legend: 'none',
+      width: 1200,
+      height: 700
 
     }
 
     var data = [
-      ['Alabama', 33],
-      ['Alaska', 33],
-      ['Arizona', 33],
-      ['Arkansas', 33],
-      ['California', 33],
-      ['Colorado', 33],
-      ['Connecticut', 33],
-      ['Delaware', 33],
-      ['Florida', 33],
-      ['Georgia', 33],
-      ['Hawaii', 33],
-      ['Idaho', 33],
-      ['Illinois', 33],
-      ['Indiana', 33],
-      ['Iowa', 33],
-      ['Kansas', 33],
-      ['Kentucky', 33],
-      ['Louisiana', 33],
-      ['Maine', 33],
-      ['Maryland', 33],
-      ['Massachusetts', 33],
-      ['Michigan', 33],
-      ['Minnesota', 33],
-      ['Mississippi', 33],
-      ['Missouri', 33],
-      ['Montana', 33],
-      ['Nebraska', 33],
-      ['Nevada', 33],
-      ['New Hampshire', 2],
-      ['New Jersey', 3],
-      ['New Mexico', 4],
-      ['New York', 98],
-      ['North Carolina', 3234],
-      ['North Dakota', 324],
-      ['Ohio', 33],
-      ['Oklahoma', 334],
-      ['Oregon', 1],
-      ['Pennsylvania', 1234],
-      ['Rhode Island', 125],
-      ['South Carolina', 158],
-      ['South Dakota', 124],
-      ['Tennessee', 134],
-      ['Texas', 1345],
-      ['Utah', 1334],
-      ['Vermont', 1554],
-      ['Virginia', 765],
-      ['Washington', 435],
-      ['West Virginia', 45],
-      ['Wisconsin', 4565],
-      ['Wyoming', 778]]
+      ['St. Louis', 1132413310],
+      ['San Francisco', 1132413310] ]
 
     var columns = [{
       type: 'string',
@@ -129,13 +274,13 @@ export default class Map extends Component {
     }]
     return (
       <Chart chartType='GeoChart'
-        width={'70em'}
-        height={'480px'}
         rows={data}
         columns={columns}
         options={options}
         graph_id='GeoChart'
-        legend_toggle />
+        // legend_toggle
+      />
     )
   }
 }
+*/

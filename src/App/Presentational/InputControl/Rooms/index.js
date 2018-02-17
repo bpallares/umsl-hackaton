@@ -24,7 +24,7 @@ const Rooms = (props) => (
     selection
     onChange={props.onChange}
     options={types}
-    style={{marginRight: '15px'}}
+    style={{marginBottom: '10px'}}
 
   />
 )

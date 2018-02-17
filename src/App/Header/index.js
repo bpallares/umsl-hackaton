@@ -3,7 +3,7 @@ import { } from 'semantic-ui-react'
 import './index.css'
 const Header = () => (
   <div className='header'>
-    <h2>Header</h2>
+    <center><h2>Google HvsS</h2></center>
   </div>
 )
 export default Header

@@ -6,7 +6,10 @@ import Job from './Job'
 import Type from './Type'
 import './index.css'
 const InputControl = (props) => (
-  <Container >
+  <Container style={{
+    padding: '30px',
+    width: '250px'
+  }}>
     <Job job={props.job} onChange={props.onJobChange} />
     <Rooms rooms={props.rooms} onChange={props.onRoomsChange} />
     <Type type={props.type} onChange={props.onTypeChange} />

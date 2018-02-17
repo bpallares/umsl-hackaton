@@ -20,7 +20,7 @@ const Job = (props) => (
     selection
     onChange={props.onChange}
     options={types}
-    style={{marginRight: '15px'}}
+    style={{marginBottom: '10px'}}
   />
 )
 export default Job

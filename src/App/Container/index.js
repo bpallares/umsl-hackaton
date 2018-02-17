@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Map from '../Presentational/Map'
-import InputControl from '../Presentational/InputControl'
 import { Container } from 'semantic-ui-react'
 import './index.css'
 
@@ -29,14 +28,6 @@ class AppContainer extends Component {
   render () {
     return (
       <Container className='custom-container'>
-        <InputControl
-          job={this.state.job}
-          onJobChange={this.onJobChange}
-          rooms={this.state.rooms}
-          onRoomsChange={this.onRoomsChange}
-          type={this.state.type}
-          onTypeChange={this.onTypeChange} />
-        <br />
         <Map />
       </Container>
     )
