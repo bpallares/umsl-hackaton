@@ -16,15 +16,14 @@ class AppContainer extends Component {
     this.onRoomsChange = this.onRoomsChange.bind(this)
     this.onTypeChange = this.onTypeChange.bind(this)
   }
-  onJobChange (value) {
+  onJobChange = (e, { name, value, options }) => {
     this.setState({job: value})
   }
-  onRoomsChange (value) {
+  onRoomsChange = (e, { name, value, options }) => {
     this.setState({rooms: value})
   }
   onTypeChange = (e, { name, value, options }) => {
-    // this.setState({ [name]: value })
-    console.log(value)
+    this.setState({ type: value }, () => console.log(this.state))
   }
   render () {
     return (
