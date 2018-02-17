@@ -9,7 +9,7 @@ class AppContainer extends Component {
     this.state = {
       job:'',
       rooms: 3,
-      type:'',
+      type:'Type State default',
       data: []
     }
     this.onJobChange = this.onJobChange.bind(this)
@@ -23,6 +23,7 @@ class AppContainer extends Component {
     this.setState({rooms:value})
   }
   onTypeChange(value){
+    console.log(value)
     this.setState({type:value})
   }
   render () {
