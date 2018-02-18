@@ -1,3 +1,4 @@
+/* global google */
 import React from 'react'
 import { compose, withProps } from 'recompose'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, MarkerWithLabel } from 'react-google-maps'
@@ -201,14 +202,15 @@ const MyMapComponent = compose(
 
     defaultCenter={{ lat: 42.877742, lng: -97.380979 }}
   >
-
     {
       props.isMarkerShown && props.data.mapPoints && (
         <span>
           {
             props.data.mapPoints.map((e, index) => (
               e && (
-                <Marker key={index} position={{ lat: e.latitude, lng: e.longitude }} onClick={() => props.getTheClicky(e, props.data)} />
+                <Marker key={index} position={{ lat: e.latitude, lng: e.longitude }}
+                  animation={google.maps.Animation.DROP}
+                  onClick={() => props.getTheClicky(e, props.data)} />
               )
             ))
           }
@@ -220,26 +222,12 @@ const MyMapComponent = compose(
 
 export default class Map extends React.PureComponent {
   state = {
-    isMarkerShown: false,
+    isMarkerShown: true,
     dataPassedOn: ''
   }
 
   componentWillReceiveProps () {
     this.setState({dataPassedOn: this.props.formData})
-  }
-  componentDidMount () {
-    this.delayedShowMarker()
-  }
-
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
   }
 
   render () {

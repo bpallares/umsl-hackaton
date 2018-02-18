@@ -3,6 +3,7 @@ import { Chart } from 'react-google-charts'
 import {getCityObject} from '../../Utils/getCity'
 import { Divider } from 'semantic-ui-react'
 import {getSalaryCity, getBedRooms} from '../../Utils/getCity'
+import './index.css'
 
 class RightSideData extends Component {
   constructor (props) {
@@ -27,7 +28,7 @@ class RightSideData extends Component {
       ? getSalaryCity(this.props.passOnData.formsData.job, this.props.passOnData.city.city).salary : null
     const rooms = this.props.passOnData.city && this.props.passOnData.formsData ? getBedRooms(this.props.passOnData.city.city) : null
     return (
-      <div style={{padding: '30px', color: 'white'}}>
+      <div style={{padding: '30px', color: 'white', height: '100vh'}} >
         <h1>HighLights</h1>
         <h4>City Population</h4>
         <h6>Your city compared with some bigger cities</h6>
