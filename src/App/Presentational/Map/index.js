@@ -25,7 +25,7 @@ const MyMapComponent = compose(
     defaultZoom={4}
     defaultOptions={{
       zoomControl: false,
-      scaleControl: false,
+      scaleControl: true,
       scrollwheel: false,
       disableDoubleClickZoom: true,
       disableDefaultUI: true,
