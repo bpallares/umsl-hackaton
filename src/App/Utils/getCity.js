@@ -22,6 +22,31 @@ export const getSalary = (whatJob) => {
   return Salaries.type[whatJob]
 }
 
+export const getRating = (salary, type, data) => {
+  // console.log(salary, type, data)
+
+  let holder = []
+
+  data.map(e => {
+    if (e[type]) {
+      // console.log(e.RegionName, e[type], salary / e[type])
+      let structure = {
+        city: '',
+        rate: ''
+      }
+      structure.city = e.RegionName
+      structure.rate = salary / e[type]
+      holder.push(structure)
+      // console.log(salary / e[type])
+    }
+  })
+  var byRate = holder.slice(0)
+  byRate.sort(function (a, b) {
+    return b.rate - a.rate
+  })
+  return byRate
+}
+
 /*
 let a = []
 let b = ['New York', 'Los Angeles', 'Chicago', 'Philadelphia', 'Phoenix', 'Las Vegas', 'San Diego', 'Dallas', 'San Jose', 'Jacksonville', 'San Francisco', 'Indianapolis', 'Detroit', 'Columbus', 'Memphis', 'Charlotte', 'El Paso', 'Boston', 'Seattle', 'Baltimore', 'Denver', 'Washington', 'Nashville', 'Milwaukee', 'Tucson', 'Portland', 'Oklahoma City', 'Omaha', 'Albuquerque', 'Fresno', 'Sacramento', 'Mesa', 'Long Beach', 'Virginia Beach', 'Colorado Springs', 'Atlanta', 'Miami', 'Oakland', 'Tulsa', 'Cleveland', 'Honolulu', 'Minneapolis', 'Baton Rouge', 'New Orleans', 'Arlington', 'Raleigh', 'Wichita', 'Tampa', 'Anaheim', 'Santa Ana', 'Aurora', 'Saint Louis', 'Corpus Christi', 'Cincinnati', 'Pittsburgh', 'Riverside', 'Marietta', 'Anchorage', 'Bakersfield', 'Saint Paul', 'Toledo', 'Silver Spring', 'Lexington', 'Newark', 'Tallahassee', 'Stockton', 'Plano', 'Buffalo']

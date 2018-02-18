@@ -4,6 +4,7 @@ import Rooms from './Rooms'
 import Job from './Job'
 import Type from './Type'
 import './index.css'
+import { get } from 'http'
 
 class InputControl extends Component {
   constructor () {
@@ -11,22 +12,40 @@ class InputControl extends Component {
     this.state = {
       job: '',
       rooms: '',
-      type: '',
-      data: []
+      type: ''
     }
     this.onJobChange = this.onJobChange.bind(this)
     this.onRoomsChange = this.onRoomsChange.bind(this)
-    this.onTypeChange = this.onTypeChange.bind(this)
   }
-  onJobChange = (e, { name, value, options }) => {
-    this.setState({job: value}, () => this.props.getData(this.state))
+  getvalue (value) {
+    let stringValue = null
+    switch (value) {
+      case 'se':
+        stringValue = 'Software Engineer'
+        break
+      case 'etse':
+        stringValue = 'Entry Software Engining'
+        break
+      case 'ac':
+        stringValue = 'Accountant'
+        break
+      case 'ph':
+        stringValue = 'Pharmacist'
+        break
+      case 'dt':
+        stringValue = 'Data Scientist'
+        break
+    }
+    return stringValue
+  }
+  onJobChange = (e, {value, text}) => {
+    const stringValue = this.getvalue(value)
+    this.setState({job: value, jobName: stringValue}, () => this.props.getData(this.state))
   }
   onRoomsChange = (e, { name, value, options }) => {
     this.setState({rooms: value}, () => this.props.getData(this.state))
   }
-  onTypeChange = (e, { name, value, options }) => {
-    this.setState({ type: value }, () => this.props.getData(this.state))
-  }
+
   render () {
     return (
       <Container style={{
@@ -35,7 +54,6 @@ class InputControl extends Component {
       }}>
         <Job job={this.state.job} onChange={this.onJobChange} />
         <Rooms rooms={this.state.rooms} onChange={this.onRoomsChange} />
-        <Type type={this.state.type} onChange={this.onTypeChange} />
       </Container>
     )
   }

@@ -4,14 +4,29 @@ import '../index.css'
 
 const types = [
   {
-    key: 'j',
+    key: 1,
     text: 'Software Engineer',
     value: 'se'
   },
   {
-    key: 'o',
+    key: 2,
     text: 'Front End Developer',
     value: 'etse'
+  },
+  {
+    key: 3,
+    text: 'Accountant',
+    value: 'ac'
+  },
+  {
+    key: 4,
+    text: 'Pharmacist',
+    value: 'ph'
+  },
+  {
+    key: 5,
+    text: 'Data Scientist',
+    value: 'dt'
   }
 ]
 const Job = (props) => (
