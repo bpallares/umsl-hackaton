@@ -1,7 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { compose, withProps } from 'recompose'
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
-import { Chart } from 'react-google-charts'
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, MarkerWithLabel } from 'react-google-maps'
 import {getCityObject} from '../../Utils/getCity'
 
 /* do no use this for now
@@ -202,23 +201,32 @@ const MyMapComponent = compose(
 
     defaultCenter={{ lat: 42.877742, lng: -97.380979 }}
   >
-    {props.isMarkerShown && (
-      <span>
-        <Marker position={{ lat: getCityObject('Orlando').latitude, lng: getCityObject('Orlando').longitude }} onClick={props.onMarkerClick} />
-        <Marker position={{ lat: getCityObject('New York').latitude, lng: getCityObject('New York').longitude }} onClick={props.onMarkerClick} />
-        <Marker position={{ lat: getCityObject('San Francisco').latitude, lng: getCityObject('San Francisco').longitude }} onClick={props.onMarkerClick} />
-        <Marker position={{ lat: getCityObject('Chicago').latitude, lng: getCityObject('Chicago').longitude }} onClick={props.onMarkerClick} />
-      </span>
-    )
+
+    {
+      props.isMarkerShown && props.data.mapPoints && (
+        <span>
+          {
+            props.data.mapPoints.map((e, index) => (
+              e && (
+                <Marker key={index} position={{ lat: e.latitude, lng: e.longitude }} onClick={() => props.getTheClicky(e, props.data)} />
+              )
+            ))
+          }
+        </span>
+      )
     }
   </GoogleMap>
 )
 
 export default class Map extends React.PureComponent {
   state = {
-    isMarkerShown: false
+    isMarkerShown: false,
+    dataPassedOn: ''
   }
 
+  componentWillReceiveProps () {
+    this.setState({dataPassedOn: this.props.formData})
+  }
   componentDidMount () {
     this.delayedShowMarker()
   }
@@ -235,11 +243,16 @@ export default class Map extends React.PureComponent {
   }
 
   render () {
+    // console.log(this.props)
     return (
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
-      />
+      this.state.dataPassedOn && (
+        <MyMapComponent
+          data={this.state.dataPassedOn}
+          isMarkerShown={this.state.isMarkerShown}
+          onMarkerClick={this.handleMarkerClick}
+          getTheClicky={this.props.getTheClick}
+        />)
+
     )
   }
 }

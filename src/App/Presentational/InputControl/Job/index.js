@@ -6,12 +6,12 @@ const types = [
   {
     key: 'j',
     text: 'Software Engineer',
-    value: 'Software Engineer'
+    value: 'se'
   },
   {
     key: 'o',
     text: 'Front End Developer',
-    value: 'Front End Developer'
+    value: 'etse'
   }
 ]
 const Job = (props) => (

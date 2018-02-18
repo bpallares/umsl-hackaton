@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Chart } from 'react-google-charts'
 import {getCityObject} from '../../Utils/getCity'
-import { Divider, Segment } from 'semantic-ui-react'
+import { Divider } from 'semantic-ui-react'
 
 class RightSideData extends Component {
   constructor (props) {
@@ -17,11 +17,11 @@ class RightSideData extends Component {
     tempCities.push(getCityObject('San Francisco'))
     tempCities.push(getCityObject('Orlando'))
 
-    this.setState({cities: tempCities}, () => console.log(this.state))
+    this.setState({cities: tempCities})
   }
 
   render () {
-    console.log(this.state.cities[0].city)
+    console.log(this.props.passOnData)
     return (
       <div style={{padding: '30px', color: 'white'}}>
         <h1>HighLights</h1>
@@ -45,7 +45,8 @@ class RightSideData extends Component {
 
         />
         <Divider inverted />
-
+        <h4>Information</h4>
+        {this.props.passOnData.city && (<h6>{this.props.passOnData.city.city}</h6>)}
       </div>
     )
   }
