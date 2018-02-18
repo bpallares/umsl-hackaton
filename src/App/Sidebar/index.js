@@ -18,8 +18,9 @@ class MainAuth extends Component {
     return (
       <div>
         <Sidebar as={Menu} animation='overlay' width='very thin' style={{width: '250px'}} visible icon='labeled' vertical inverted className='gradient'>
-          <h1 style={{color: 'white', marginTop: '5px'}}>Salary Vs Housing Tool Scrapper</h1>
+          <h1 style={{color: 'white', marginTop: '5px'}}>Houses Vs Salaries</h1>
           <center><Divider inverted style={{width: '190px'}} /></center>
+          <p style={{color: 'white'}}>Choose your options :</p>
           <InputControl getData={this.props.getInputData} />
         </Sidebar>
         <div style={{ height: '-webkit-fill-available', marginLeft: '150px', paddingLeft: '20px', paddingRight: '20px' }} >

@@ -2,7 +2,7 @@
 import React from 'react'
 import { compose, withProps } from 'recompose'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, MarkerWithLabel } from 'react-google-maps'
-import {getCityObject} from '../../Utils/getCity'
+import {getCityObject, getRating} from '../../Utils/getCity'
 
 /* do no use this for now
 import googleMapsClient from '@google/maps'
@@ -25,12 +25,12 @@ const MyMapComponent = compose(
   <GoogleMap
     defaultZoom={4}
     defaultOptions={{
-      zoomControl: false,
+      /* zoomControl: false,
       scaleControl: true,
       scrollwheel: false,
       disableDoubleClickZoom: true,
       disableDefaultUI: true,
-      draggable: false,
+      draggable: false, */
       styles: [
         {
           featureType: 'all',
