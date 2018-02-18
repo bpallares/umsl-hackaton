@@ -18,7 +18,7 @@ const types = [
     value: '3 BED'
   },
   {
-    key: 'j',
+    key: 'jf',
     text: '4-Bedroom',
     value: '4 BED'
   },

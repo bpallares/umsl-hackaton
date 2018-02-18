@@ -25,6 +25,7 @@ class RightSideData extends Component {
   }
 
   render () {
+    console.log(this.props.passOnData.city)
     const salary = this.props.passOnData.city && this.props.passOnData.formsData
       ? getSalaryCity(this.props.passOnData.formsData.job, this.props.passOnData.city.city).salary : null
     const rooms = this.props.passOnData.city && this.props.passOnData.formsData ? getBedRooms(this.props.passOnData.city.city) : null
@@ -32,24 +33,33 @@ class RightSideData extends Component {
       <div style={{padding: '30px', color: 'white', height: '100vh'}} >
         <h1>HighLights</h1>
         <h4>City Population</h4>
-        <h6>Your city compared with some bigger cities</h6>
-        { this.props.passOnData.salaryCarrer ? (
+        <h6>Salarty Comparation</h6>
+        { this.props.passOnData.salaryCarrer && this.props.passOnData.city ? (
           <Chart
             chartType='BarChart'
             data={[
               ['City', 'Salary'],
-              [this.props.passOnData.salaryCarrer[0].city, Number(this.props.passOnData.salaryCarrer[0].salary)],
+              [this.props.passOnData.salaryCarrer[10].city, Number(this.props.passOnData.salaryCarrer[10].salary)],
               [this.props.passOnData.salaryCarrer[1].city, Number(this.props.passOnData.salaryCarrer[1].salary)],
-              [this.props.passOnData.salaryCarrer[2].city, Number(this.props.passOnData.salaryCarrer[2].salary)]
+              [this.props.passOnData.salaryCarrer[2].city, Number(this.props.passOnData.salaryCarrer[2].salary)],
+              [this.props.passOnData.city.city || this.props.passOnData.salaryCarrer[2].city, salary || 0]
 
             ]}
             style={{margin: '50px'}}
-            options={{backgroundColor: 'none', legend: 'none'}}
+            options={{backgroundColor: 'none',
+              legend: 'none',
+              colors: ['#e7711c', '#4374e0'],
+              hAxis: {
+                textStyle: {color: '#FFF'}
+              },
+              vAxis: {
+                textStyle: {color: '#FFF'}
+              }
+
+            }}
             graph_id='ScatterChart'
             width='100%'
             height='200px'
-            legendTextStyle={{color: '#FFF'}}
-            titleTextStyle={{ color: '#FFF' }}
             legend_toggle
 
           />
@@ -62,7 +72,14 @@ class RightSideData extends Component {
 
             ]}
             style={{margin: '50px'}}
-            options={{backgroundColor: 'none', legend: 'none'}}
+            options={{backgroundColor: 'none',
+              legend: 'none',
+              hAxis: {
+                textStyle: {color: '#FFF'}
+              },
+              vAxis: {
+                textStyle: {color: '#FFF'}
+              }}}
             graph_id='ScatterChart'
             width='100%'
             height='200px'
