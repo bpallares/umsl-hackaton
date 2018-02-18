@@ -1,0 +1,614 @@
+[
+  {
+    "RegionID": 6181,
+    "RegionName": "New York",
+    "1 BED": 898000,
+    "2 BED": 813500,
+    "3 BED": 552100,
+    "4 BED": 700900,
+    "5 BED": 969100
+  },
+  {
+    "RegionID": 12447,
+    "RegionName": "Los Angeles",
+    "1 BED": 492300,
+    "2 BED": 588800,
+    "3 BED": 628500,
+    "4 BED": 779100,
+    "5 BED": 1403100
+  },
+  {
+    "RegionID": 17426,
+    "RegionName": "Chicago",
+    "1 BED": 215400,
+    "2 BED": 298200,
+    "3 BED": 312900,
+    "4 BED": 311700,
+    "5 BED": 311300
+  },
+  {
+    "RegionID": 13271,
+    "RegionName": "Philadelphia",
+    "1 BED": 288900,
+    "2 BED": 173800,
+    "3 BED": 116800,
+    "4 BED": 187000,
+    "5 BED": 336100
+  },
+  {
+    "RegionID": 40326,
+    "RegionName": "Phoenix",
+    "1 BED": 123100,
+    "2 BED": 167100,
+    "3 BED": 218600,
+    "4 BED": 291500,
+    "5 BED": 432600
+  },
+  {
+    "RegionID": 18959,
+    "RegionName": "Las Vegas",
+    "1 BED": 112600,
+    "2 BED": 158900,
+    "3 BED": 234100,
+    "4 BED": 302700,
+    "5 BED": 401400
+  },
+  {
+    "RegionID": 54296,
+    "RegionName": "San Diego",
+    "1 BED": 330800,
+    "2 BED": 478300,
+    "3 BED": 610100,
+    "4 BED": 742700,
+    "5 BED": 973400
+  },
+  {
+    "RegionID": 38128,
+    "RegionName": "Dallas",
+    "1 BED": 557100,
+    "2 BED": 739300,
+    "3 BED": 990800,
+    "4 BED": 447600,
+    "5 BED": 904800
+  },
+  {
+    "RegionID": 33839,
+    "RegionName": "San Jose",
+    "1 BED": 86900,
+    "2 BED": 102800,
+    "3 BED": 155400,
+    "4 BED": 1123800,
+    "5 BED": 1461200
+  },
+  {
+    "RegionID": 25290,
+    "RegionName": "Jacksonville",
+    "1 BED": 893900,
+    "2 BED": 1245300,
+    "3 BED": 1497300,
+    "4 BED": 245000,
+    "5 BED": 348400
+  },
+  {
+    "RegionID": 20330,
+    "RegionName": "San Francisco",
+    "1 BED": 220100,
+    "2 BED": 71200,
+    "3 BED": 320100,
+    "4 BED": 1711900,
+    "5 BED": 2007800
+  },
+  {
+    "RegionID": 32149,
+    "RegionName": "Indianapolis",
+    "1 BED": 149800,
+    "2 BED": 39800,
+    "3 BED": 165100,
+    "4 BED": 168900,
+    "5 BED": 262600
+  },
+  {
+    "RegionID": 17762,
+    "RegionName": "Detroit",
+    "1 BED": 54200,
+    "2 BED": 99200,
+    "3 BED": 43000,
+    "4 BED": 429800,
+    "5 BED": 93900
+  },
+  {
+    "RegionID": 10920,
+    "RegionName": "Columbus",
+    "1 BED": 85100,
+    "2 BED": 47600,
+    "3 BED": 141900,
+    "4 BED": 55300,
+    "5 BED": 245500
+  },
+  {
+    "RegionID": 32811,
+    "RegionName": "Memphis",
+    "1 BED": 158500,
+    "2 BED": 132500,
+    "3 BED": 81700,
+    "4 BED": 208600,
+    "5 BED": 269800
+  },
+  {
+    "RegionID": 24043,
+    "RegionName": "Charlotte",
+    "1 BED": 104900,
+    "2 BED": 83600,
+    "3 BED": 180900,
+    "4 BED": 135000,
+    "5 BED": 605200
+  },
+  {
+    "RegionID": 17933,
+    "RegionName": "El Paso",
+    "1 BED": 528700,
+    "2 BED": 598600,
+    "3 BED": 118600,
+    "4 BED": 344400,
+    "5 BED": 272200
+  },
+  {
+    "RegionID": 44269,
+    "RegionName": "Boston",
+    "1 BED": 455000,
+    "2 BED": 633000,
+    "3 BED": 549600,
+    "4 BED": 175800,
+    "5 BED": 689900
+  },
+  {
+    "RegionID": 16037,
+    "RegionName": "Seattle",
+    "1 BED": 165800,
+    "2 BED": 184700,
+    "3 BED": 770100,
+    "4 BED": 610700,
+    "5 BED": 970500
+  },
+  {
+    "RegionID": 3523,
+    "RegionName": "Baltimore",
+    "1 BED": 263000,
+    "2 BED": 367200,
+    "3 BED": 132900,
+    "4 BED": 881900,
+    "5 BED": 246900
+  },
+  {
+    "RegionID": 11093,
+    "RegionName": "Denver",
+    "1 BED": 384700,
+    "2 BED": 541400,
+    "3 BED": 417800,
+    "4 BED": 191100,
+    "5 BED": 838800
+  },
+  {
+    "RegionID": 41568,
+    "RegionName": "Washington",
+    "1 BED": 205300,
+    "2 BED": 200000,
+    "3 BED": 588500,
+    "4 BED": 575800,
+    "5 BED": 1464800
+  },
+  {
+    "RegionID": 6118,
+    "RegionName": "Nashville",
+    "1 BED": 131300,
+    "2 BED": 92500,
+    "3 BED": 236600,
+    "4 BED": 833600,
+    "5 BED": 495200
+  },
+  {
+    "RegionID": 5976,
+    "RegionName": "Milwaukee",
+    "1 BED": 87400,
+    "2 BED": 141800,
+    "3 BED": 115000,
+    "4 BED": 361400,
+    "5 BED": 113200
+  },
+  {
+    "RegionID": 7481,
+    "RegionName": "Tucson",
+    "1 BED": 360700,
+    "2 BED": 389400,
+    "3 BED": 176700,
+    "4 BED": 113100,
+    "5 BED": 349800
+  },
+  {
+    "RegionID": 13373,
+    "RegionName": "Portland",
+    "1 BED": 84100,
+    "2 BED": 72000,
+    "3 BED": 412200,
+    "4 BED": 228700,
+    "5 BED": 624300
+  },
+  {
+    "RegionID": 33225,
+    "RegionName": "Oklahoma City",
+    "1 BED": 128600,
+    "2 BED": 109100,
+    "3 BED": 135500,
+    "4 BED": 545100,
+    "5 BED": 279500
+  },
+  {
+    "RegionID": 40152,
+    "RegionName": "Omaha",
+    "1 BED": 86500,
+    "2 BED": 148200,
+    "3 BED": 159500,
+    "4 BED": 220800,
+    "5 BED": 296000
+  },
+  {
+    "RegionID": 23429,
+    "RegionName": "Albuquerque",
+    "1 BED": 336700,
+    "2 BED": 142900,
+    "3 BED": 186600,
+    "4 BED": 261200,
+    "5 BED": 318400
+  },
+  {
+    "RegionID": 18203,
+    "RegionName": "Fresno",
+    "1 BED": 150100,
+    "2 BED": 282700,
+    "3 BED": 222200,
+    "4 BED": 251300,
+    "5 BED": 368400
+  },
+  {
+    "RegionID": 20288,
+    "RegionName": "Sacramento",
+    "1 BED": 154500,
+    "2 BED": 168000,
+    "3 BED": 292800,
+    "4 BED": 303200,
+    "5 BED": 453800
+  },
+  {
+    "RegionID": 19331,
+    "RegionName": "Mesa",
+    "1 BED": 194800,
+    "2 BED": 477700,
+    "3 BED": 223700,
+    "4 BED": 359600,
+    "5 BED": 417300
+  },
+  {
+    "RegionID": 46298,
+    "RegionName": "Long Beach",
+    "1 BED": 247500,
+    "2 BED": 64900,
+    "3 BED": 645300,
+    "4 BED": 288600,
+    "5 BED": 859600
+  },
+  {
+    "RegionID": 41515,
+    "RegionName": "Virginia Beach",
+    "1 BED": 505500,
+    "2 BED": 162600,
+    "3 BED": 127700,
+    "4 BED": 747400,
+    "5 BED": 466300
+  },
+  {
+    "RegionID": 4172,
+    "RegionName": "Colorado Springs",
+    "1 BED": 59800,
+    "2 BED": 195600,
+    "3 BED": 235200,
+    "4 BED": 229600,
+    "5 BED": 395500
+  },
+  {
+    "RegionID": 37211,
+    "RegionName": "Atlanta",
+    "1 BED": 384200,
+    "2 BED": 219100,
+    "3 BED": 253200,
+    "4 BED": 323800,
+    "5 BED": 1139800
+  },
+  {
+    "RegionID": 12700,
+    "RegionName": "Miami",
+    "1 BED": 166300,
+    "2 BED": 330900,
+    "3 BED": 147000,
+    "4 BED": 317300,
+    "5 BED": 1003000
+  },
+  {
+    "RegionID": 13072,
+    "RegionName": "Oakland",
+    "1 BED": 258100,
+    "2 BED": 625500,
+    "3 BED": 381500,
+    "4 BED": 515200,
+    "5 BED": 1233000
+  },
+  {
+    "RegionID": 20859,
+    "RegionName": "Tulsa",
+    "1 BED": 119100,
+    "2 BED": 88600,
+    "3 BED": 835800,
+    "4 BED": 435800,
+    "5 BED": 379500
+  },
+  {
+    "RegionID": 24115,
+    "RegionName": "Cleveland",
+    "1 BED": 271600,
+    "2 BED": 54500,
+    "3 BED": 126300,
+    "4 BED": 1072700,
+    "5 BED": 77100
+  },
+  {
+    "RegionID": 18615,
+    "RegionName": "Honolulu",
+    "1 BED": 147600,
+    "2 BED": 535700,
+    "3 BED": 62700,
+    "4 BED": 242800,
+    "5 BED": 1157300
+  },
+  {
+    "RegionID": 5983,
+    "RegionName": "Minneapolis",
+    "1 BED": 97500,
+    "2 BED": 221200,
+    "3 BED": 912300,
+    "4 BED": 63100,
+    "5 BED": 415600
+  },
+  {
+    "RegionID": 44055,
+    "RegionName": "Baton Rouge",
+    "1 BED": 93600,
+    "2 BED": 135400,
+    "3 BED": 260200,
+    "4 BED": 1045200,
+    "5 BED": 544500
+  },
+  {
+    "RegionID": 19594,
+    "RegionName": "New Orleans",
+    "1 BED": 126000,
+    "2 BED": 318600,
+    "3 BED": 181200,
+    "4 BED": 313200,
+    "5 BED": 656100
+  },
+  {
+    "RegionID": 50763,
+    "RegionName": "Arlington",
+    "1 BED": 105400,
+    "2 BED": 109300,
+    "3 BED": 191300,
+    "4 BED": 308700,
+    "5 BED": 307900
+  },
+  {
+    "RegionID": 54047,
+    "RegionName": "Raleigh",
+    "1 BED": 129100,
+    "2 BED": 172900,
+    "3 BED": 214100,
+    "4 BED": 299200,
+    "5 BED": 515500
+  },
+  {
+    "RegionID": 7929,
+    "RegionName": "Wichita",
+    "1 BED": 83100,
+    "2 BED": 84100,
+    "3 BED": 136900,
+    "4 BED": 338600,
+    "5 BED": 290500
+  },
+  {
+    "RegionID": 41176,
+    "RegionName": "Tampa",
+    "1 BED": 134300,
+    "2 BED": 154700,
+    "3 BED": 217800,
+    "4 BED": 201300,
+    "5 BED": 622400
+  },
+  {
+    "RegionID": 16764,
+    "RegionName": "Anaheim",
+    "1 BED": 42900,
+    "2 BED": 459700,
+    "3 BED": 569700,
+    "4 BED": 376500,
+    "5 BED": 784300
+  },
+  {
+    "RegionID": 47568,
+    "RegionName": "Santa Ana",
+    "1 BED": 140000,
+    "2 BED": 437900,
+    "3 BED": 532800,
+    "4 BED": 648100,
+    "5 BED": 683700
+  },
+  {
+    "RegionID": 16846,
+    "RegionName": "Aurora",
+    "1 BED": 102600,
+    "2 BED": 253000,
+    "3 BED": 317400,
+    "4 BED": 608600,
+    "5 BED": 517400
+  },
+  {
+    "RegionID": 6891,
+    "RegionName": "Saint Louis",
+    "1 BED": 59500,
+    "2 BED": 127600,
+    "3 BED": 169300,
+    "4 BED": 387800,
+    "5 BED": 311700
+  },
+  {
+    "RegionID": 38025,
+    "RegionName": "Corpus Christi",
+    "1 BED": 70200,
+    "2 BED": 104900,
+    "3 BED": 168500,
+    "4 BED": 222100,
+    "5 BED": 335000
+  },
+  {
+    "RegionID": 4099,
+    "RegionName": "Cincinnati",
+    "1 BED": 90000,
+    "2 BED": 99300,
+    "3 BED": 131100,
+    "4 BED": 231200,
+    "5 BED": 313700
+  },
+  {
+    "RegionID": 26529,
+    "RegionName": "Pittsburgh",
+    "1 BED": 108100,
+    "2 BED": 309800,
+    "3 BED": 132300,
+    "4 BED": 210000,
+    "5 BED": 329800
+  },
+  {
+    "RegionID": 47401,
+    "RegionName": "Riverside",
+    "1 BED": 48700,
+    "2 BED": 131200,
+    "3 BED": 347800,
+    "4 BED": 232800,
+    "5 BED": 532800
+  },
+  {
+    "RegionID": 12562,
+    "RegionName": "Marietta",
+    "1 BED": 338400,
+    "2 BED": 190300,
+    "3 BED": 223000,
+    "4 BED": 413600,
+    "5 BED": 600100
+  },
+  {
+    "RegionID": 23482,
+    "RegionName": "Anchorage",
+    "1 BED": "",
+    "2 BED": 129200,
+    "3 BED": 293800,
+    "4 BED": 368200,
+    "5 BED": 482300
+  },
+  {
+    "RegionID": 3506,
+    "RegionName": "Bakersfield",
+    "1 BED": "",
+    "2 BED": 178000,
+    "3 BED": 202700,
+    "4 BED": 364400,
+    "5 BED": 329100
+  },
+  {
+    "RegionID": 20313,
+    "RegionName": "Saint Paul",
+    "1 BED": "",
+    "2 BED": 48700,
+    "3 BED": 199800,
+    "4 BED": 267200,
+    "5 BED": 405200
+  },
+  {
+    "RegionID": 34303,
+    "RegionName": "Toledo",
+    "1 BED": "",
+    "2 BED": 204500,
+    "3 BED": 68400,
+    "4 BED": 245000,
+    "5 BED": 104800
+  },
+  {
+    "RegionID": 7081,
+    "RegionName": "Silver Spring",
+    "1 BED": "",
+    "2 BED": 121600,
+    "3 BED": 385100,
+    "4 BED": 84700,
+    "5 BED": 495800
+  },
+  {
+    "RegionID": 25574,
+    "RegionName": "Lexington",
+    "1 BED": "",
+    "2 BED": 174600,
+    "3 BED": 164900,
+    "4 BED": 440200,
+    "5 BED": 443500
+  },
+  {
+    "RegionID": 12970,
+    "RegionName": "Newark",
+    "1 BED": "",
+    "2 BED": 94500,
+    "3 BED": 177700,
+    "4 BED": 270500,
+    "5 BED": 275300
+  },
+  {
+    "RegionID": 47945,
+    "RegionName": "Tallahassee",
+    "1 BED": "",
+    "2 BED": 184800,
+    "3 BED": 165800,
+    "4 BED": 214200,
+    "5 BED": 455700
+  },
+  {
+    "RegionID": 7266,
+    "RegionName": "Stockton",
+    "1 BED": "",
+    "2 BED": 71400,
+    "3 BED": 263300,
+    "4 BED": 303400,
+    "5 BED": 388400
+  },
+  {
+    "RegionID": 53915,
+    "RegionName": "Plano",
+    "1 BED": "",
+    "2 BED": "",
+    "3 BED": 280900,
+    "4 BED": 330200,
+    "5 BED": 493800
+  },
+  {
+    "RegionID": 17222,
+    "RegionName": "Buffalo",
+    "1 BED": "",
+    "2 BED": "",
+    "3 BED": 80000,
+    "4 BED": 383400,
+    "5 BED": 122500
+  }
+]
