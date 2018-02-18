@@ -5,17 +5,17 @@ const types = [
   {
     key: 'j',
     text: '1-Bedroom',
-    value: 1
+    value: '1 BED'
   },
   {
     key: 'f',
     text: '2-Bedroom',
-    value: 2
+    value: '2 BED'
   },
   {
     key: 'h',
     text: '3-Bedroom',
-    value: 3
+    value: '3 BED'
   }
 ]
 const Rooms = (props) => (
