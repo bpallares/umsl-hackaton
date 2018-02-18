@@ -33,7 +33,7 @@ class RightSideData extends Component {
       <div style={{padding: '30px', color: 'white', height: '100vh'}} >
         <h1>HighLights</h1>
         <h4>City Population</h4>
-        <h6>Salarty Comparation</h6>
+        <h6>Salarty comparison</h6>
         { this.props.passOnData.salaryCarrer && this.props.passOnData.city ? (
           <Chart
             chartType='BarChart'
