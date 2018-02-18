@@ -10,7 +10,7 @@ const types = [
   },
   {
     key: 2,
-    text: 'Front End Developer',
+    text: 'Entry Level Software Engineer',
     value: 'etse'
   },
   {

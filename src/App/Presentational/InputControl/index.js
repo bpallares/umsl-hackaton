@@ -24,7 +24,7 @@ class InputControl extends Component {
         stringValue = 'Software Engineer'
         break
       case 'etse':
-        stringValue = 'Entry Software Engining'
+        stringValue = 'Entry Level Software Engineer'
         break
       case 'ac':
         stringValue = 'Accountant'
