@@ -9,10 +9,10 @@
     "react": "^16.2.0",
     "react-chartkick": "^0.1.6",
     "react-d3-map": "^0.8.3",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.2.1",
     "react-google-charts": "^1.5.5",
     "react-google-maps": "^9.4.5",
-    "react-scripts": "1.1.1",
+    "react-scripts": "4.0.0",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.78.2"
   },
